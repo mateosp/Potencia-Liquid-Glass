@@ -4,12 +4,10 @@ import { useState, useEffect } from 'react'
 import NavigationBar from '../../shared/components/NavigationBar'
 
 export default function HomePage() {
-  const [scrollY, setScrollY] = useState(0)
   const [currentSection, setCurrentSection] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY)
       
       // Determinar qué sección está visible
       const windowHeight = window.innerHeight
